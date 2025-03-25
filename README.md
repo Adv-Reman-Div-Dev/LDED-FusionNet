@@ -98,7 +98,7 @@ This repository is an **updated version** of the previous repository:
 
 
 <p align="center">
-  <img src="doc/hybrid_CNN_fusion.png" width="500px"/><br>
+  <img src="doc/hybrid_CNN_fusion.PNG" width="500px"/><br>
   <b>Figure 4. Hybrid CNN model fusing acoustic and visual sensor data.</b>
 </p>
 
