@@ -50,16 +50,16 @@ This repository is an **updated version** of the previous repository:
 ## Related Code
 
 ### [ Multisensor fusion-based digital twin framework, RCIM (2023)](https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571)
-<div style="text-align: center;">
-  <img src="doc/MFDT_frameowrk.png" alt="Description" width="600px"/>
-  <br><b>Figure 1. Multisensor fusion-based digital twin framework.</b>
-</div>
 
+<p align="center">
+  <img src="doc/MFDT_frameowrk.png" width="600px"/><br>
+  <b>Figure 1. Multisensor fusion-based digital twin framework.</b>
+</p>
 
-<div style="text-align: center;">
-  <img src="doc/dataset_overview(keyhole_pore).png" alt="Description" width="600px"/>
-  <br><b>Figure 2. Visualization of Audio-Visual Singal During LDED process.</b>
-</div>
+<p align="center">
+  <img src="doc/dataset_overview(keyhole_pore).png" width="600px"/><br>
+  <b>Figure 2. Visualization of Audio-Visual Singal During LDED process.</b>
+</p>
 
 
 
@@ -83,10 +83,12 @@ This repository is an **updated version** of the previous repository:
 
 ### [Inference of Melt Pool Visual Characteristics Using Acoustic Signal, ICCAR (2024)](https://ieeexplore.ieee.org/abstract/document/10569391) 
 
-<div style="text-align: center;">
-  <img src="doc/signal_and_dataset-framework.png" alt="Description" width="500px"/>
-  <br><b>Figure 3. Inference of Melt Pool Visual Characteristics Using Acoustic Signal.</b>
-</div>
+
+
+<p align="center">
+  <img src="doc/signal_and_dataset-framework.png" width="500px"/><br>
+  <b>Figure 3. Inference of Melt Pool Visual Characteristics Using Acoustic Signal.</b>
+</p>
 
 
 *Related code:*
@@ -94,10 +96,11 @@ This repository is an **updated version** of the previous repository:
 
 ### [IDETC-CIE (2023)](https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87295/1170490)
 
-<div style="text-align: center;">
-  <img src="doc/hybrid_CNN_fusion.png" alt="Description" width="500px"/>
-  <br><b>Figure 4. Hybrid CNN model fusing acoustic and visual sensor data.</b>
-</div>
+
+<p align="center">
+  <img src="doc/hybrid_CNN_fusion.png" width="500px"/><br>
+  <b>Figure 4. Hybrid CNN model fusing acoustic and visual sensor data.</b>
+</p>
 
 *Related code:*
 - `5c_audiovisual_CNN.ipynb`
