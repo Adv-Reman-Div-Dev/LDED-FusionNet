@@ -1,51 +1,44 @@
-# LDED-FusionNet: Machine Learning-Based Audio-Visual Defect Detection for LDED AM Process
+# LDED-FusionNet: Audio-Visual Fusion for Defect Detection in Laser-Directed Energy Deposition (LDED)
+
 ## Overview
-This repository contains the implementation for **multisensor fusion-based digital twin modeling** in **Laser-Directed Energy Deposition (LDED)**. The approach integrates **audio-visual feature extraction** and **machine learning (ML) models** to predict localized quality in **robotic LDED**.
+This repository contains the implementation of **audio-visual feature fusion** using machine learning for defect detection and quality prediction in **Laser-Directed Energy Deposition (LDED)** additive manufacturing processes.
 
-### **Visual Summary**
-#### **Multisensor Fusion-Based Digital Twin Framework**
-<div align="center">
-  <img src="doc/MFDT_frameowrk.png" alt="MFDT Framework" width="800px"/>
-</div>
-
-#### **Experimental Setup and Schematic Representation**
-<table align="center" width="800px" style="border:none;">
+#### Experimental Setup and Schematic Representation
+<table align="center" style="border:none;">
   <tr style="border:none;">
-    <td align="center" width="320px" style="border:none;">
-      <img src="doc/figures-photos.png" alt="Experimental Setup" width="320px"/>
+    <td align="center" style="border:none;">
+      <img src="doc/figures-photos.png" alt="Experimental Setup" width="250px"/>
       <br><b>Experimental Setup</b>
     </td>
-    <td align="center" width="480px" style="border:none;">
-      <img src="doc/figures-schematic.png" alt="Schematic Representation" width="480px"/>
+    <td align="center" style="border:none;">
+      <img src="doc/figures-schematic.png" alt="Schematic Representation" width="400px"/>
       <br><b>Schematic Representation</b>
     </td>
   </tr>
 </table>
 
+---
 
+## Related Publications
 
-### **Related Publications**
-
-1. **Multisensor Fusion-Based Digital Twin for Localized Quality Prediction in Robotic Laser-Directed Energy Deposition**
-   - Published in *Robotics and Computer-Integrated Manufacturing (RCIM), 2023*
-   - DOI: [https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571](https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571)
+1. **Multisensor Fusion-Based Digital Twin for Localized Quality Prediction in Robotic Laser-Directed Energy Deposition** *(RCIM, 2023)* [Link](https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571)
    - Proposes a **Multisensor Fusion-Based Digital Twin**, leveraging **feature-level fusion** of **acoustic and visual data** for LDED quality prediction.
+   - Demonstrates significant improvements in localized quality prediction.
 
-2. **In-situ Defect Detection in Laser-Directed Energy Deposition with Machine Learning and Multi-Sensor Fusion**
-   - Published in *Journal of Mechanical Science and Technology (JMST), 2024*
-   - DOI: [https://link.springer.com/article/10.1007/s12206-024-2401-1](https://link.springer.com/article/10.1007/s12206-024-2401-1)
-   - Explores **audio-visual feature correlations**, analyzing **acoustic signals across multiple domains** and **coaxial melt pool images** to train ML models. 
-   - Introduces **intra-modality and cross-modality correlation analysis**, identifying key **acoustic and vision-based signatures** in LDED process dynamics.
+2. **In-situ Defect Detection in Laser-Directed Energy Deposition with Machine Learning and Multi-Sensor Fusion** *(JMST, 2024)* [Link](https://link.springer.com/article/10.1007/s12206-024-2401-1)
+   - Explores acoustic signals and coaxial melt pool images for defect detection.
+   - Presents **intra-modality and cross-modality feature correlations** to identify critical audiovisual signatures in LDED process dynamics.
+   
 
-3. **Inference of Melt Pool Visual Characteristics in Laser Additive Manufacturing Using Acoustic Signal Features and Robotic Motion Data**
-   - Published in *ICCAR 2024*
-   - DOI: [https://ieeexplore.ieee.org/abstract/document/10569391](https://ieeexplore.ieee.org/abstract/document/10569391)
+3. **Inference of Melt Pool Visual Characteristics in Laser Additive Manufacturing Using Acoustic Signal Features and Robotic Motion Data** *(ICCAR, 2024)* [Link](https://ieeexplore.ieee.org/abstract/document/10569391)
    - Proposes a novel technique to **infer melt pool visual characteristics** in LAM by combining **acoustic signal features** with **robotic tool-center-point (TCP) motion data**.
-   - Demonstrates that **acoustic + TCP motion data fusion** achieves an **R² score above 0.7**, outperforming acoustic-only models.
    - Highlights the potential of **microphone-based monitoring** as a **cost-effective alternative** for **melt pool tracking and closed-loop control** in LAM
 
+4. **Multimodal Sensor Fusion for Real-Time Location-Dependent Defect Detection in Laser-Directed Energy Deposition** *(IDETC-CIE, 2023)* [Link](https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87295/1170490)
+   - Utilizes a **hybrid CNN** to directly fuse acoustic and visual raw data.
+   - Achieves high defect detection accuracy without manual feature extraction.
 
-
+---
 
 ### **Repository Upgrade**
 This repository is an **updated version** of the previous repository:
@@ -54,80 +47,138 @@ This repository is an **updated version** of the previous repository:
 - **Expanded Cross-Modality Analysis**: Provides an in-depth understanding of **audio-visual feature correlation**, along with additional **ablation studies** to analyze feature effectiveness.
 - **Excludes Virtual Quality Map Construction**: Unlike the previous repository, this code **does not include spatial registration of robot motion into multisensor features** or ML predictions. The **visualization and virtual quality map construction** remain in the **older repository**: 🔗 [LDED-Multisensor-Fusion](https://github.com/Davidlequnchen/LDED-multisensor-fusion).
 
+## Related Code
+
+### [ Multisensor fusion-based digital twin framework, RCIM (2023)](https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571)
+![Digital Twin Framework](doc/MFDT_frameowrk.png)
+*Fig.1: Multisensor fusion-based digital twin framework.*
+
+*Related code:*
+- `1_vision_audio_segmentation.ipynb`
+- `1b_audio_signal_preprocessing.ipynb`
+- `1c_audiovisual_signal_visualization.ipynb`
+
+### [AudioVisual Cross Modality Analysis, JMST (2024)](https://link.springer.com/article/10.1007/s12206-024-2401-1)
+<table align="center">
+  <tr>
+    <td align="center"><img src="doc/figures-cross-modality.png" width="350px"><br><b>Cross-Modality Correlation Heatmap</b></td>
+    <td align="center"><img src="doc/figures-results.png" width="350px"><br><b>Audiovisual Feature Fusion Results</b></td>
+  </tr>
+</table>
+
+*Related code:*
+- `2_feature_extraction.ipynb`
+- `2b_spatiotemporal_feature_fusion.ipynb`
+- `2c_audiovisual_feature_analysis.ipynb`
+
+### [Inference of Melt Pool Visual Characteristics Using Acoustic Signal, ICCAR (2024)](https://ieeexplore.ieee.org/abstract/document/10569391) 
+![Signal and Dataset Framework](doc/signal_and_dataset-framework.png)
+*Fig.3: Inference of Melt Pool Visual Characteristics Using Acoustic Signal.*
+
+*Related code:*
+- `3_meltpool_feature_prediction.ipynb`
+
+### [IDETC-CIE (2023)](https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87295/1170490)
+![Hybrid CNN Fusion Model](doc/hybrid_CNN_fusion.svg)
+*Fig.4: Hybrid CNN model fusing acoustic and visual sensor data.*
+
+*Related code:*
+- `5c_audiovisual_CNN.ipynb`
+
+
+---
+
 ## Installation
 
-- Create a new conda environment with Python version 3.8.10:
-  ```
+- Create and activate conda environment:
+  ```bash
   conda create --name torch python=3.8.10
-  ```  
-- Activate your torch environment:
-  ```
   conda activate torch
   ```
-- Check CUDA Version:
-  ```
+
+- Check CUDA and install PyTorch:
+  ```bash
   nvcc --version
-  ```
-- Check the driver API version:
-  ```
   nvidia-smi
-  ```
-- Install PyTorch (for example, if using CUDA 11.0):
-  ```
   conda install pytorch torchvision torchaudio cudatoolkit=11.0 -c pytorch
   ```
-- Verify GPU installation:
+
+- Verify GPU usage:
   ```python
   import torch
   print(torch.cuda.is_available())
   ```
-- Install the required dependencies:
-  ```
+
+- Install additional dependencies:
+  ```bash
   pip install -r requirements.txt
   ```
 
-## Features
-- **Multisensor Data Fusion**: Feature-level fusion of **audio and visual** data for LDED quality prediction.
-- **Audio-Visual Feature Extraction**: Implements domain-specific **acoustic signal processing** and **image-based feature extraction**.
-- **Machine Learning Models**: Supports training ML models for **defect detection and process quality prediction**.
-- **Cross-Modality Correlation Analysis**: Investigates relationships between **acoustic features** and **melt pool images**.
-
-## Repository Structure
-```
-LDED-FusionNet/
-│── code/                  # Source code for feature extraction, modeling, and evaluation
-│── result_images/         # Visual results of the analysis
-│── saved_scalers/         # Precomputed scalers for data normalization
-│── trained_models/        # Saved ML models
-│── README.md              # Project documentation
-│── requirements.txt       # Required dependencies
-```
-
-## System Requirements
-- **Operating System**: Ubuntu Linux
-- **Python Version**: 3.9+
-- **Required Libraries:**
-  ```bash
-  pip install numpy pandas scikit-learn essentia opencv-python torch torchvision
-  ```
-- **GPU Support** (optional for deep learning models)
-  ```bash
-  pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
-  ```
+---
 
 ## Citation
-If you use this repository, please cite the following papers:
+Here's a comprehensive and clear revision for your **Citation** section:
 
+---
+
+## Citation
+
+If you find this repository or the associated dataset useful in your research, please cite the relevant papers as follows:
+
+**1. Multisensor Fusion-Based Digital Twin for Localized Quality Prediction in Robotic Laser-Directed Energy Deposition** *(RCIM, 2023)*:
 ```
 @article{chen2023digitaltwin,
-  author    = {Chen, Lequn and others},
-  title     = {Multisensor Fusion-Based Digital Twin for Localized Quality Prediction in Robotic Laser-Directed Energy Deposition},
-  journal   = {Robotics and Computer-Integrated Manufacturing},
-  year      = {2023},
-  url       = {https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571}
+  title={Multisensor Fusion-Based Digital Twin for Localized Quality Prediction in Robotic Laser-Directed Energy Deposition},
+  author={Chen, Lequn and others},
+  journal={Robotics and Computer-Integrated Manufacturing},
+  year={2023},
+  publisher={Elsevier},
+  url={https://www.sciencedirect.com/science/article/abs/pii/S0736584523000571}
 }
 ```
 
+**2. In-situ Defect Detection in Laser-Directed Energy Deposition with Machine Learning and Multi-Sensor Fusion** *(JMST, 2024)*:
+```
+@article{chen2024multisensorfusion,
+  title={In-situ Defect Detection in Laser-Directed Energy Deposition with Machine Learning and Multi-Sensor Fusion},
+  author={Chen, Lequn and others},
+  journal={Journal of Mechanical Science and Technology},
+  year={2024},
+  publisher={Springer},
+  url={https://link.springer.com/article/10.1007/s12206-024-2401-1}
+}
+```
+
+**3. Inference of Melt Pool Visual Characteristics in Laser Additive Manufacturing Using Acoustic Signal Features and Robotic Motion Data** *(ICCAR, 2024)*:
+```
+@inproceedings{chen2024inference,
+  title={Inference of Melt Pool Visual Characteristics in Laser Additive Manufacturing Using Acoustic Signal Features and Robotic Motion Data},
+  author={Chen, Lequn and others},
+  booktitle={2024 International Conference on Control, Automation and Robotics (ICCAR)},
+  year={2024},
+  publisher={IEEE},
+  url={https://ieeexplore.ieee.org/abstract/document/10569391}
+}
+```
+
+**4. Multimodal Sensor Fusion for Real-Time Location-Dependent Defect Detection in Laser-Directed Energy Deposition** *(IDETC-CIE, 2023)*:
+```
+@inproceedings{chen2023multimodal,
+  title={Multimodal Sensor Fusion for Real-Time Location-Dependent Defect Detection in Laser-Directed Energy Deposition},
+  author={Chen, Lequn and Yao, Xiling and Feng, Wenhe and Chew, Youxiang and Moon, Seung Ki},
+  booktitle={Proceedings of the ASME 2023 International Design Engineering Technical Conferences and Computers and Information in Engineering Conference},
+  year={2023},
+  publisher={ASME},
+  url={https://asmedigitalcollection.asme.org/IDETC-CIE/proceedings-abstract/IDETC-CIE2023/87295/1170490}
+}
+```
+
+--- 
+
+Feel free to let me know if you have any additional requests!
+
 ## License
-This repository is released under the MIT License.
+Released under the MIT License.
+
+
 
