@@ -136,10 +136,6 @@ This repository is an **updated version** of the previous repository:
 
 ---
 
-## Citation
-Here's a comprehensive and clear revision for your **Citation** section:
-
----
 
 ## Citation
 
